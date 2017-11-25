@@ -1,0 +1,46 @@
+﻿https://www.google.com.ua/maps/@50.4795234,30.8309963,3123m/data=!3m1!1e3?hl=ru
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13600.466676017402!2d30.830996254220246!3d50.47952338199084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1505478848351" width="1920" height="385" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+мой апи :    AIzaSyAc97onEvyIpdJgT60N4N2cCfLjUoelLXA
+
+
+
+
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) <!-- infowindows -->
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2) <!-- infowindows-shadow -->
+
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(3)  <!-- блок крестика block-cross-->
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(3) > img <!-- крестик cross-image -->
+
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) <!-- левая полстрелочки left-arrow-->
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div <!-- ее тень left-arrow-shadow-->
+
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2)  <!-- правая полустр right-arrow-->
+#map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div <!-- ее тень right-arrow-shadow-->
+
+
+Прочие плагины gulp
+LiveReload — плагин избавляет вас от надобности каждый раз перезагружать страницу в браузере чтобы увидеть изменения, теперь это происходит автоматически при сохранении измененного файла:
+
+npm i gulp-connect -D
+
+Предохраняем Gulp от вылета — иногда случается так, что Gulp может вылететь из режима наблюдения в случае возникновения критических ошибок (в основном из-за JS). Данный плагин, по возможности, старается оставить процессы Gulp работоспособными:
+
+npm i gulp-plumber -D
+
+Переименование файлов — самая обычная работа с именами файлов. Плагин позволяет полностью переименовывать файлы, изменять расширение, добавлять префиксы и постфиксы, например чтобы привести файл вида style.styl в style.min.css:
+
+npm i gulp-rename -D
+
+Клинер — иногда возникает потребность в полном очищении каталога build, тут нам на помощь приходит плагин:
+
+npm i rimraf -D
+
+Sourcemap — для того чтобы после минификации ваши файлы оставались читаемы через отладку браузером, нужно добавлять sourcemap в минифицируемые файлы:
+
+npm i gulp-sourcemaps -D
+
+Расширенные возможности watch — плагин делает watch умным, теперь он не перезаписывает все файлы в билд при изменении всего одного файла, перезаписывается конкретный измененный файл, что экономит время и ресурсы:
+
+npm i gulp-watch -D
